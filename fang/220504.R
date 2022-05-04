@@ -31,18 +31,18 @@ print("Q3:")
 print(q3)
 print(fractions(q3))
 
-# Q5
+# Q4
 E_X <- sum(X*p_X)
 E_X.2 <- sum(X^2*p_X)
 
 Var_X <- E_X.2 - E_X^2
 
-print("Q5:")
+print("Q4:")
 print(Var_X)
 
-# Q4
+# Q5
 E_Y <- sum(Y*p_Y)
 
-print("Q4:")
+print("Q5:")
 print(E_Y)
 print(fractions(E_Y))
