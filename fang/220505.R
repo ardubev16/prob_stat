@@ -28,7 +28,7 @@ print(q2)
 # Q3
 offset <- 0.333
 
-to_integrate <- function(x,y) { Vectorize(f_XY)(x,y)*Vectorize(f_X)(x)*Vectorize(f_Y)(y) }
+to_integrate <- function(x,y) { x*y*Vectorize(f_XY)(x,y) }
 
 q3 <- integral2(to_integrate, 0, 1, 0, 1)$Q + offset
 
@@ -40,4 +40,4 @@ print(q3)
 # [1] "Q2:"
 # [1] 0.8485714 0.2017571
 # [1] "Q3:"
-# [1] 1.503068
+# [1] 0.6663333
