@@ -59,32 +59,7 @@ version1 <- function() {
     print_q(3, E_ND)
 }
 
-version2 <- function() {
-# Q1
-    p_D_N <- function(d,n) { 1/D*dbinom(n, d, p) }
-    p_N <- function(n) {
-        res <- 0
-        for (d in Rd)
-            res <- res + p_D_N(d, n)
-        res
-    }
-
-    E_N <- E(p_N, Rn)
-
-    print_q(1, E_N)
-
-# Q2
-    p_D_H <- function(d) { p_D_N(d, q2_H)/p_N(q2_H) }
-
-    E_H <- E(p_D_H, Rd)
-
-    print_q(2, E_H)
-
-# Q3
-    E_ND <- sum(Rd^2*p/D)
-
-    print_q(3, E_ND)
-}
+version2 <- function() { }
 
 if (VERSION == 1) version1() else version2()
 
